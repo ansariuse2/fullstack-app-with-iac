@@ -7,7 +7,7 @@ resource "aws_vpc" "valoriz_vpc" {
     enable_dns_support = true
 }
     output "valoriz_vpc_id" {
-    value = aws_vpc.valoriz_vpc.vpc.valoriz_vpc_id
+    value = aws_vpc.valoriz_vpc.id
     }
       
 
