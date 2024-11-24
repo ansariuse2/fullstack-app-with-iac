@@ -10,7 +10,7 @@ valoriz_subnet_cidr =var.valoriz_subnet_cidr
 }
 
 module "route_table" {
-  source            = "./modules/network/route_table"
+  source            = "./module/network/route_table"
   vpc_id            = module.vpc_module.valoriz_vpc_id
   public_subnet_id  = module.subnet_module.valoriz_subnet_id
   igw_id            = module.internet_gateway.igw_id
@@ -18,12 +18,12 @@ module "route_table" {
 
 
 module "internet_gateway" {
-  source  = "./modules/network_gateway/internet_gateway"
+  source  = "./module/network_gateway/internet_gateway"
   vpc_id  = module.vpc_module.valoriz_vpc_id
 }
 
 module "security_group" {
-  source         = "./modules/network/security_group"
+  source         = "./module/network/security_group"
   vpc_id         = module.vpc_module.valoriz_vpc_id
   sg_name        = "valoriz-sg"
   sg_description = "Security group for web access"
