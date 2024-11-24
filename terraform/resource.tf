@@ -22,4 +22,9 @@ module "internet_gateway" {
   vpc_id  = module.vpc_module.valoriz_vpc_id
 }
 
-
+module "security_group" {
+  source         = "./modules/network/security_group"
+  vpc_id         = module.vpc_module.valoriz_vpc_id
+  sg_name        = "valoriz-sg"
+  sg_description = "Security group for web access"
+}
