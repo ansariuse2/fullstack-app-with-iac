@@ -5,4 +5,3 @@ variable "valoriz_subnet_cidr" {
     type = string
 }
   
-}

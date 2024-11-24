@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-backend
+spec:
+  containers:
+  - name: django-backend
+    image: <your_registry>/my-backend:latest
+    env:
+    - name: DB_HOST
+      valueFrom:
+        secretKeyRef:
+          name: django-db-secret
+          key: DB_ENDPOINT
+    - name: DB_USER
+      valueFrom:
+        secretKeyRef:
+          name: django-db-secret
+          key: DB_USERNAME
+    - name: DB_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: django-db-secret
+          key: DB_PASSWORD

@@ -28,3 +28,10 @@ module "security_group" {
   sg_name        = "valoriz-sg"
   sg_description = "Security group for web access"
 }
+
+module "eks" {
+  source = "./module/eks"
+  subnet_id = module.subnet_module.public_subnet_id
+  security_group = module.security_group.security_group_id
+  node_role_arn = var.node_role_arn
+}

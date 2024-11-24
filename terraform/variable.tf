@@ -8,4 +8,8 @@ variable "valoriz_vpc_cidr" {
   
 }
 
+variable "node_role_arn" {
+  type = string
+    default = "1123"
+}
 
