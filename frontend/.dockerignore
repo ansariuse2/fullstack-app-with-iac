@@ -1,0 +1,12 @@
+# Node.js modules (these will be installed in the container)
+node_modules
+
+# Build output
+.next
+out
+
+# Logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
