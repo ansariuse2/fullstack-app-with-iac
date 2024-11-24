@@ -28,8 +28,7 @@ SECRET_KEY = 'django-insecure-6q(!@t913kw)*==80_qh@ec#qv*f=r(ot_@3pf)&hpdeqe4_vq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', '15.207.116.155']
 
 # Application definition
 
@@ -52,6 +51,12 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+
+#by me
+
+    'corsheaders.middleware.CorsMiddleware',
+
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -60,8 +65,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
+#   "corsheaders.middleware.CorsMiddleware",
+#    "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = 'RestaurantCore.urls'
@@ -88,6 +93,7 @@ WSGI_APPLICATION = 'RestaurantCore.wsgi.application'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
+    "http://15.207.116.155:3000",
 ]
 
 
