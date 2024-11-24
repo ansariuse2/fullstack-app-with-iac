@@ -18,7 +18,7 @@ module "route_table" {
 
 
 module "internet_gateway" {
-  source  = "./module/network_gateway/internet_gateway"
+  source  = "./module/network/internet_gateway"
   vpc_id  = module.vpc_module.valoriz_vpc_id
 }
 
