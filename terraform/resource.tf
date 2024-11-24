@@ -31,7 +31,8 @@ module "security_group" {
 
 module "eks" {
   source = "./module/eks"
-  subnet_id = module.subnet_module.public_subnet_id
+  
+  subnet_ids = module.subnet_module.public_subnet_id
   security_group = module.security_group.security_group_id
   node_role_arn = var.node_role_arn
 }

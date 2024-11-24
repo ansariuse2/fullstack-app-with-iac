@@ -9,6 +9,7 @@ variable "security_group" {
 }
 variable "cluster_name" {
   type = string
+  default = "valoriz_eks_cluster"
   
 }
 variable "node_role_arn" {
