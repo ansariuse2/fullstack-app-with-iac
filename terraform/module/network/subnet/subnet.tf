@@ -4,7 +4,7 @@ vpc_id = var.valoriz_vpc_id
 availability_zone = "ap-south-1a"
 
 }
-output "public_subnet_id" {
+output "public_subnet_ids" {
     value = aws_subnet.valoriz_vpc_public_subnet1.id
   
 }
